@@ -1,0 +1,42 @@
+@import 'src/assets/scss/variables';
+
+.customSelect {
+    cursor: pointer !important;
+    
+    &__control {
+        width: 125px !important;
+        border: 0 !important;
+        cursor: pointer !important;
+
+        &--menu-is-open {
+            color: var(--black-color)
+        }
+    }
+
+    &__value-container {
+        padding: 0 !important;
+    }
+
+    &__placeholder {
+        font-family: var(--main-font) !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        color: var(--black-color) !important;
+    }
+
+    &__indicators {
+        cursor: pointer !important;
+    }
+
+    &__indicator {
+        padding: 0 !important;
+    }
+
+    &__indicator-separator {
+        display: none !important;
+    }
+
+    &__menu {
+        cursor: pointer !important;
+    }
+}
