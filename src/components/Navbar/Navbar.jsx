@@ -15,20 +15,12 @@ import styles from './Navbar.module.scss'
 
 const options = [
     {
-        value: 'playstation 5',
-        label: 'Playstation 5'
+        value: 'my profile',
+        label: 'My Profile'
     },
     {
-        value: 'playstation 4',
-        label: 'Playstation 4'
-    },
-    {
-        value: 'playstation 3',
-        label: 'Playstation 3'
-    },
-    {
-        value: 'playstation 2',
-        label: 'Playstation 2'
+        value: 'my playstation',
+        label: 'My PlayStation'
     },
 ]
 

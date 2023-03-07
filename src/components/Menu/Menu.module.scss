@@ -1,0 +1,37 @@
+@import 'src/assets/scss/variables';
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+
+    .list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item {
+        font-family: var(--main-font);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            margin: 0 10px 0 0;
+            border-right: 2px solid var(--grey-color);
+            padding: 0 10px 0 0;
+        }
+    }
+
+    .link {
+        color: var(--grey-color);
+        text-decoration: none;
+    }
+
+    .activeLink {
+        color: var(--white-color);
+        text-decoration: none;
+    }
+}
