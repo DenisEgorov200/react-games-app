@@ -1,14 +1,11 @@
 import './App.scss';
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux';
 
 import {
 	EPLORE_ROUTE,
+	GAME_ROUTE,
 	COLLECTIONS_ROUTE,
 	DEALS_ROUTE,
 	SUBSCRIPTIONS_ROUTE,
@@ -17,6 +14,7 @@ import {
 import { Navbar } from './components/Navbar/Navbar';
 
 import { Discover } from './pages/Discover/Discover';
+import { GamePage } from './pages/GamePage/GamePage';
 import { Explore } from './pages/Explore/Explore';
 import { Collections } from './pages/Collections/Collections';
 import { Deals } from './pages/Deals/Deals';
@@ -30,26 +28,15 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route index element={<Discover />} />
-					<Route
-						path={EPLORE_ROUTE}
-						element={<Explore />}
-					/>
-					<Route
-						path={COLLECTIONS_ROUTE}
-						element={<Collections />}
-					/>
-					<Route
-						path={DEALS_ROUTE}
-						element={<Deals />}
-					/>
+					<Route path={EPLORE_ROUTE} element={<Explore />} />
+					<Route path={`${GAME_ROUTE}:name`} element={<GamePage />} />
+					<Route path={COLLECTIONS_ROUTE} element={<Collections />} />
+					<Route path={DEALS_ROUTE} element={<Deals />} />
 					<Route
 						path={SUBSCRIPTIONS_ROUTE}
 						element={<Subscriptions />}
 					/>
-					<Route
-						path='*'
-						element={<NotFoundPage />}
-					/>
+					<Route path='*' element={<NotFoundPage />} />
 				</Routes>
 			</Router>
 		</Provider>

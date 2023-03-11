@@ -62,18 +62,13 @@ export const HeroSlide = () => {
 					disabledClass: `${styles.disabled}`,
 				}}
 				onBeforeInit={(swiper) => {
-					swiper.params.navigation.prevEl =
-						navigationPrevRef.current;
-					swiper.params.navigation.nextEl =
-						navigationNextRef.current;
+					swiper.params.navigation.prevEl = navigationPrevRef.current;
+					swiper.params.navigation.nextEl = navigationNextRef.current;
 				}}
 				grabCursor={true}
 			>
 				{games.map((game) => (
-					<SwiperSlide
-						className={styles.heroSlide}
-						key={game.name}
-					>
+					<SwiperSlide className={styles.heroSlide} key={game.name}>
 						<HeroSlideItem item={game} />
 					</SwiperSlide>
 				))}

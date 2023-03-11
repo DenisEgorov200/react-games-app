@@ -1,0 +1,144 @@
+@import 'src/assets/scss/variables';
+
+.gamePage {
+	.heroGamePage {
+		position: relative;
+		height: 100vh;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			bottom: 0;
+			left: 0;
+			background: transparent;
+			background: linear-gradient(
+				90deg,
+				rgba(0, 0, 0, 1) 10%,
+				rgba(0, 16, 16, 1) 30%,
+				rgba(0, 20, 0, 40) 69%,
+				rgba(0, 0, 0, 1) 100%
+			);
+			opacity: 0.1;
+		}
+	}
+
+	.heroFooter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.heroGame {
+		display: flex;
+	}
+
+	.heroImage {
+		width: 170px;
+		min-height: 170px;
+		filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.25));
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 30px 0 0;
+	}
+
+	.heroGameInfo {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.heroGameTitle {
+		font-family: var(--main-font);
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 100%;
+		color: var(--white-color);
+		margin: 0 0 12px 0;
+	}
+
+	.heroGamePlatform {
+		display: flex;
+		align-items: center;
+		font-family: var(--main-font);
+		font-weight: 600;
+		font-size: 12px;
+		margin: 0 0 5px 0;
+
+		span:not(:last-child) {
+			margin: 0 10px 0 0;
+		}
+	}
+
+	.heroGamePs {
+		margin: 0 10px 0 0;
+	}
+
+	.heroGameFooter {
+		display: flex;
+	}
+
+	.heroGameEsrb {
+		margin: 0 5px 0 0;
+
+		img {
+			height: 52.5px;
+			width: 35px;
+			max-width: 100%;
+		}
+	}
+
+	.heroGameDesc {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 285px;
+		font-family: var(--main-font);
+		font-weight: 600;
+		font-size: 10px;
+		line-height: 14px;
+		color: var(--grey-color);
+
+		span:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	.heroInfo {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.favorite {
+		width: 15px;
+		height: 13px;
+		fill: var(--white-color);
+		margin: 0 0 7px 0;
+		cursor: pointer;
+
+		svg {
+			transition: fill 0.3s ease-in-out;
+
+			&:hover {
+				fill: var(--grey-color);
+			}
+		}
+	}
+
+	.heroPrice {
+		font-family: var(--main-font);
+		font-weight: 700;
+		font-size: 25px;
+		margin: 0 0 11px 0;
+	}
+
+	.heroBtn {
+		font-size: 16px;
+	}
+}

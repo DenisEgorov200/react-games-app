@@ -8,6 +8,7 @@
 	width: 100%;
 	border-radius: 10px;
 	overflow: hidden;
+	cursor: pointer;
 
 	.cardGameHeader {
 		width: 170px;
@@ -90,7 +91,6 @@
 
 	.cardGameBtn {
 		width: 100%;
-		justify-content: center;
 		font-weight: 700;
 		font-size: 12px;
 		line-height: 16px;

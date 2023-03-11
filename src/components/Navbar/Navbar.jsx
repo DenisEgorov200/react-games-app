@@ -27,45 +27,25 @@ const options = [
 export const Navbar = () => {
 	return (
 		<div className={styles.navbar}>
-			<Link
-				to='..'
-				relative='path'
-				className={styles.sonyBar}
-			>
+			<Link to='/' className={styles.sonyBar}>
 				<img src={sonyLogoSvg} alt='Sony' />
 			</Link>
 			<div className={styles.header}>
-				<Link
-					to='..'
-					relative='path'
-					className={styles.logo}
-				>
-					<img
-						src={psStoreLogo}
-						alt='PlayStation Store'
-					/>
+				<Link to='/' className={styles.logo}>
+					<img src={psStoreLogo} alt='PlayStation Store' />
 				</Link>
 				<div className={styles.info}>
-					<MySelect
-						className={styles.select}
-						options={options}
-					/>
+					<MySelect className={styles.select} options={options} />
 					<div className={styles.avatar}>
 						<img src={ava} alt='avatar' />
 					</div>
 					<div className={styles.favorite}>
-						<img
-							src={favorite}
-							alt='favorite'
-						/>
+						<img src={favorite} alt='favorite' />
 					</div>
 					<CartBlock />
 					<div className={styles.search}>
 						<div className={styles.icon}>
-							<img
-								src={search}
-								alt='search'
-							/>
+							<img src={search} alt='search' />
 						</div>
 						<input
 							className={styles.input}

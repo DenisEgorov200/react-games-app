@@ -46,9 +46,7 @@ export const Discover = () => {
 	return (
 		<>
 			<HeroSlide />
-			<div
-				className={`${styles.container} ${styles.discoverContainer}`}
-			>
+			<div className={`${styles.container} ${styles.discoverContainer}`}>
 				<section className={styles.trending}>
 					<SectionTitle>
 						<Title>Trending</Title>
@@ -56,10 +54,7 @@ export const Discover = () => {
 					</SectionTitle>
 					<div className={styles.cardWrapper}>
 						{games.slice(3, 6).map((game) => (
-							<LongCardGame
-								key={game.name}
-								item={game}
-							/>
+							<LongCardGame key={game.name} item={game} />
 						))}
 					</div>
 				</section>
@@ -70,10 +65,7 @@ export const Discover = () => {
 					</SectionTitle>
 					<div className={styles.cardGrid}>
 						{games.map((game) => (
-							<CardGame
-								key={game.name}
-								item={game}
-							/>
+							<CardGame key={game.name} item={game} />
 						))}
 					</div>
 				</section>

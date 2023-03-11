@@ -19,36 +19,24 @@ export const Menu = ({ className }) => {
 		<nav className={`${styles.menu} ${className}`}>
 			<ul className={styles.list}>
 				<li className={styles.item}>
-					<NavLink
-						to={INDEX_ROUTE}
-						className={getActiveStyles}
-					>
+					<NavLink to={INDEX_ROUTE} className={getActiveStyles}>
 						discover
 					</NavLink>
 				</li>
 				<li className={styles.item}>
-					<NavLink
-						to={EPLORE_ROUTE}
-						className={getActiveStyles}
-					>
+					<NavLink to={EPLORE_ROUTE} className={getActiveStyles}>
 						explore
 					</NavLink>
 				</li>
 			</ul>
 			<ul className={styles.list}>
 				<li className={styles.item}>
-					<NavLink
-						to={COLLECTIONS_ROUTE}
-						className={getActiveStyles}
-					>
+					<NavLink to={COLLECTIONS_ROUTE} className={getActiveStyles}>
 						collections
 					</NavLink>
 				</li>
 				<li className={styles.item}>
-					<NavLink
-						to={DEALS_ROUTE}
-						className={getActiveStyles}
-					>
+					<NavLink to={DEALS_ROUTE} className={getActiveStyles}>
 						deals
 					</NavLink>
 				</li>
