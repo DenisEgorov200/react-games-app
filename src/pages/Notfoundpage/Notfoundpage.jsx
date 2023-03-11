@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Notfoundpage = () => {
+export const NotFoundPage = () => {
   return (
     <div>Error 444</div>
   )
 }
-
-export default Notfoundpage

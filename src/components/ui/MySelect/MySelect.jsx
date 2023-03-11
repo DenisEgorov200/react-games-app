@@ -1,17 +1,15 @@
-import React, {useState} from 'react'
+import React, {useMemo, useState} from 'react'
 import Select from 'react-select'
 
 import './MySelect.scss'
 
-const MySelect = ({options}) => {
+export const MySelect = ({options}) => {
     const [currentChoice, setCurrentChoice] = useState('');
 
-    const getValue = () => {
-        return currentChoice ? options.find(c => c.value === currentChoice) : '';
-    }
+    const value = useMemo(() => currentChoice ? options.find(c => c.value === currentChoice) : '', [currentChoice])
 
-    const onChange = (newValue) => {
-        setCurrentChoice(newValue.value)
+    const onChange = ({value}) => {
+        setCurrentChoice(value)
     }
 
     return (
@@ -20,10 +18,8 @@ const MySelect = ({options}) => {
             classNamePrefix="customSelect"
             onChange={onChange}
             options={options}
-            value={getValue()}
+            value={value}
             placeholder="My PlayStation"
         />
     )
 }
-
-export default MySelect

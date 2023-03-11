@@ -1,0 +1,72 @@
+@import 'src/assets/scss/variables';
+
+.cartMenu {
+	width: 300px;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 3;
+	background-color: var(--dark-bg-color);
+	color: var(--white-color);
+	padding: 20px;
+	border-radius: 10px;
+
+	.cartMenuHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 0 20px 0;
+		margin: 0 0 20px 0;
+		border-bottom: 2px solid var(--white-color);
+	}
+
+	.cartMenuLogo {
+		display: flex;
+		align-items: center;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: var(--white-color);
+			transition: fill 0.3s ease-in-out;
+
+			&:hover {
+				fill: lighten($color: #000000, $amount: 50);
+			}
+		}
+
+		.cartCount {
+			margin: 0 0 0 8px;
+		}
+	}
+
+	.cartMenuList {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.cartMenuItem {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		&:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	.cartMenuFooter {
+		display: flex;
+		margin: 20px 0 0 0;
+	}
+
+	.cartMenuBtn {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		padding: 0 5px;
+		font-size: 14px;
+	}
+}

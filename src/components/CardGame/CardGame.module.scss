@@ -1,0 +1,98 @@
+@import 'src/assets/scss/variables';
+
+.сardGame {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+
+	.cardGameHeader {
+		width: 170px;
+		height: 170px;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.cardGameWrapper {
+		position: relative;
+		padding: 6px;
+		border: 1px solid var(--dark-grey-color);
+		border-top: none;
+
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: -1;
+			top: -15%;
+			height: 100%;
+			border: 1px solid var(--dark-grey-color);
+		}
+
+		&::before {
+			right: -2px;
+		}
+
+		&::after {
+			left: -2px;
+		}
+	}
+
+	.cardGameBody {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0 0 12px 0;
+	}
+
+	.cardGameTitle {
+		max-width: 158px;
+		font-family: var(--main-font);
+		font-weight: 800;
+		font-size: 12px;
+		line-height: 16px;
+		color: var(--white-color);
+		margin: 0 0 1px 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.cardGameDeveloper {
+		font-family: var(--main-font);
+		font-weight: 600;
+		font-size: 10px;
+		line-height: 14px;
+		color: var(--grey-color);
+		margin: 0 0 11px 0;
+	}
+
+	.cardGamePlatform {
+		padding: 2px 4px;
+		background: var(--dark-bg-color);
+		color: var(--grey-color);
+		border: 1px solid var(--dark-grey-color);
+		border-radius: 4px;
+		font-family: var(--main-font);
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.cardGameFooter {
+		width: 100%;
+		display: flex;
+	}
+
+	.cardGameBtn {
+		width: 100%;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 16px;
+	}
+}

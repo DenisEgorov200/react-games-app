@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './GameCover.module.scss'
+import styles from './GameCover.module.scss';
 
-const GameCover = ({ image = "" }) => {
-    return (
-        <div className={styles.gameCover} style={{backgroundImage: `url(${image})`}} />
-    )
-}
+export const GameCover = ({ image = '' }) => {
+	const DEFAULT_BG_IMAGE =
+		'https://via.placeholder.com/500';
 
-export default GameCover
+	return (
+		<div
+			className={styles.gameCover}
+			style={
+				image
+					? { backgroundImage: `url(${image})` }
+					: {
+							backgroundImage: `url(${DEFAULT_BG_IMAGE})`,
+					  }
+			}
+		/>
+	);
+};
